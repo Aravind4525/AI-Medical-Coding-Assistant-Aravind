@@ -52,7 +52,7 @@ with tab1:
                         # Download current result as CSV
                         csv = df.to_csv(index=False).encode("utf-8")
                         st.download_button(
-                            label="Download This Result (CSV)",
+                            label="Download This Result",
                             data=csv,
                             file_name="icd10_codes.csv",
                             mime="text/csv"
@@ -92,7 +92,7 @@ with tab2:
             df_all = pd.concat(all_results, ignore_index=True)
             csv_all = df_all.to_csv(index=False).encode("utf-8")
             st.download_button(
-                label="Download Full History (CSV)",
+                label="Download Full History",
                 data=csv_all,
                 file_name="icd10_history.csv",
                 mime="text/csv"
